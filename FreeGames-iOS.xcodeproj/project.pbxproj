@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C75872FA279F58AD006C0A64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75872F9279F58AD006C0A64 /* AppDelegate.swift */; };
+		C75872FC279F58AD006C0A64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75872FB279F58AD006C0A64 /* SceneDelegate.swift */; };
+		C75872FE279F58AD006C0A64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75872FD279F58AD006C0A64 /* ViewController.swift */; };
+		C7587301279F58AD006C0A64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C75872FF279F58AD006C0A64 /* Main.storyboard */; };
+		C7587303279F58B0006C0A64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7587302279F58B0006C0A64 /* Assets.xcassets */; };
+		C7587306279F58B0006C0A64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7587304279F58B0006C0A64 /* LaunchScreen.storyboard */; };
+		C7587311279F58B0006C0A64 /* FreeGames_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587310279F58B0006C0A64 /* FreeGames_iOSTests.swift */; };
+		C758731B279F58B0006C0A64 /* FreeGames_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758731A279F58B0006C0A64 /* FreeGames_iOSUITests.swift */; };
+		C758731D279F58B0006C0A64 /* FreeGames_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C758731C279F58B0006C0A64 /* FreeGames_iOSUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C758730D279F58B0006C0A64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C75872EE279F58AD006C0A64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C75872F5279F58AD006C0A64;
+			remoteInfo = "FreeGames-iOS";
+		};
+		C7587317279F58B0006C0A64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C75872EE279F58AD006C0A64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C75872F5279F58AD006C0A64;
+			remoteInfo = "FreeGames-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C75872F6279F58AD006C0A64 /* FreeGames-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FreeGames-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C75872F9279F58AD006C0A64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C75872FB279F58AD006C0A64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C75872FD279F58AD006C0A64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7587300279F58AD006C0A64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C7587302279F58B0006C0A64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C7587305279F58B0006C0A64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7587307279F58B0006C0A64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C758730C279F58B0006C0A64 /* FreeGames-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FreeGames-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7587310279F58B0006C0A64 /* FreeGames_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeGames_iOSTests.swift; sourceTree = "<group>"; };
+		C7587316279F58B0006C0A64 /* FreeGames-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FreeGames-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C758731A279F58B0006C0A64 /* FreeGames_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeGames_iOSUITests.swift; sourceTree = "<group>"; };
+		C758731C279F58B0006C0A64 /* FreeGames_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeGames_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C75872F3279F58AD006C0A64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7587309279F58B0006C0A64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7587313279F58B0006C0A64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C75872ED279F58AD006C0A64 = {
+			isa = PBXGroup;
+			children = (
+				C75872F8279F58AD006C0A64 /* FreeGames-iOS */,
+				C758730F279F58B0006C0A64 /* FreeGames-iOSTests */,
+				C7587319279F58B0006C0A64 /* FreeGames-iOSUITests */,
+				C75872F7279F58AD006C0A64 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C75872F7279F58AD006C0A64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C75872F6279F58AD006C0A64 /* FreeGames-iOS.app */,
+				C758730C279F58B0006C0A64 /* FreeGames-iOSTests.xctest */,
+				C7587316279F58B0006C0A64 /* FreeGames-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C75872F8279F58AD006C0A64 /* FreeGames-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C75872F9279F58AD006C0A64 /* AppDelegate.swift */,
+				C75872FB279F58AD006C0A64 /* SceneDelegate.swift */,
+				C75872FD279F58AD006C0A64 /* ViewController.swift */,
+				C75872FF279F58AD006C0A64 /* Main.storyboard */,
+				C7587302279F58B0006C0A64 /* Assets.xcassets */,
+				C7587304279F58B0006C0A64 /* LaunchScreen.storyboard */,
+				C7587307279F58B0006C0A64 /* Info.plist */,
+			);
+			path = "FreeGames-iOS";
+			sourceTree = "<group>";
+		};
+		C758730F279F58B0006C0A64 /* FreeGames-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C7587310279F58B0006C0A64 /* FreeGames_iOSTests.swift */,
+			);
+			path = "FreeGames-iOSTests";
+			sourceTree = "<group>";
+		};
+		C7587319279F58B0006C0A64 /* FreeGames-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C758731A279F58B0006C0A64 /* FreeGames_iOSUITests.swift */,
+				C758731C279F58B0006C0A64 /* FreeGames_iOSUITestsLaunchTests.swift */,
+			);
+			path = "FreeGames-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C75872F5279F58AD006C0A64 /* FreeGames-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7587320279F58B0006C0A64 /* Build configuration list for PBXNativeTarget "FreeGames-iOS" */;
+			buildPhases = (
+				C75872F2279F58AD006C0A64 /* Sources */,
+				C75872F3279F58AD006C0A64 /* Frameworks */,
+				C75872F4279F58AD006C0A64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FreeGames-iOS";
+			productName = "FreeGames-iOS";
+			productReference = C75872F6279F58AD006C0A64 /* FreeGames-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C758730B279F58B0006C0A64 /* FreeGames-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7587323279F58B0006C0A64 /* Build configuration list for PBXNativeTarget "FreeGames-iOSTests" */;
+			buildPhases = (
+				C7587308279F58B0006C0A64 /* Sources */,
+				C7587309279F58B0006C0A64 /* Frameworks */,
+				C758730A279F58B0006C0A64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C758730E279F58B0006C0A64 /* PBXTargetDependency */,
+			);
+			name = "FreeGames-iOSTests";
+			productName = "FreeGames-iOSTests";
+			productReference = C758730C279F58B0006C0A64 /* FreeGames-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C7587315279F58B0006C0A64 /* FreeGames-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7587326279F58B0006C0A64 /* Build configuration list for PBXNativeTarget "FreeGames-iOSUITests" */;
+			buildPhases = (
+				C7587312279F58B0006C0A64 /* Sources */,
+				C7587313279F58B0006C0A64 /* Frameworks */,
+				C7587314279F58B0006C0A64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7587318279F58B0006C0A64 /* PBXTargetDependency */,
+			);
+			name = "FreeGames-iOSUITests";
+			productName = "FreeGames-iOSUITests";
+			productReference = C7587316279F58B0006C0A64 /* FreeGames-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C75872EE279F58AD006C0A64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					C75872F5279F58AD006C0A64 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					C758730B279F58B0006C0A64 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C75872F5279F58AD006C0A64;
+					};
+					C7587315279F58B0006C0A64 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C75872F5279F58AD006C0A64;
+					};
+				};
+			};
+			buildConfigurationList = C75872F1279F58AD006C0A64 /* Build configuration list for PBXProject "FreeGames-iOS" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C75872ED279F58AD006C0A64;
+			productRefGroup = C75872F7279F58AD006C0A64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C75872F5279F58AD006C0A64 /* FreeGames-iOS */,
+				C758730B279F58B0006C0A64 /* FreeGames-iOSTests */,
+				C7587315279F58B0006C0A64 /* FreeGames-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C75872F4279F58AD006C0A64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7587306279F58B0006C0A64 /* LaunchScreen.storyboard in Resources */,
+				C7587303279F58B0006C0A64 /* Assets.xcassets in Resources */,
+				C7587301279F58AD006C0A64 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C758730A279F58B0006C0A64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7587314279F58B0006C0A64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C75872F2279F58AD006C0A64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C75872FE279F58AD006C0A64 /* ViewController.swift in Sources */,
+				C75872FA279F58AD006C0A64 /* AppDelegate.swift in Sources */,
+				C75872FC279F58AD006C0A64 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7587308279F58B0006C0A64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7587311279F58B0006C0A64 /* FreeGames_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7587312279F58B0006C0A64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C758731D279F58B0006C0A64 /* FreeGames_iOSUITestsLaunchTests.swift in Sources */,
+				C758731B279F58B0006C0A64 /* FreeGames_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C758730E279F58B0006C0A64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C75872F5279F58AD006C0A64 /* FreeGames-iOS */;
+			targetProxy = C758730D279F58B0006C0A64 /* PBXContainerItemProxy */;
+		};
+		C7587318279F58B0006C0A64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C75872F5279F58AD006C0A64 /* FreeGames-iOS */;
+			targetProxy = C7587317279F58B0006C0A64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C75872FF279F58AD006C0A64 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7587300279F58AD006C0A64 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C7587304279F58B0006C0A64 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C7587305279F58B0006C0A64 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C758731E279F58B0006C0A64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C758731F279F58B0006C0A64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C7587321279F58B0006C0A64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 998HSZS578;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FreeGames-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.FreeGames-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7587322279F58B0006C0A64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 998HSZS578;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FreeGames-iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.FreeGames-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C7587324279F58B0006C0A64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 998HSZS578;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.FreeGames-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeGames-iOS.app/FreeGames-iOS";
+			};
+			name = Debug;
+		};
+		C7587325279F58B0006C0A64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 998HSZS578;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.FreeGames-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreeGames-iOS.app/FreeGames-iOS";
+			};
+			name = Release;
+		};
+		C7587327279F58B0006C0A64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 998HSZS578;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.FreeGames-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FreeGames-iOS";
+			};
+			name = Debug;
+		};
+		C7587328279F58B0006C0A64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 998HSZS578;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.esther.FreeGames-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "FreeGames-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C75872F1279F58AD006C0A64 /* Build configuration list for PBXProject "FreeGames-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C758731E279F58B0006C0A64 /* Debug */,
+				C758731F279F58B0006C0A64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7587320279F58B0006C0A64 /* Build configuration list for PBXNativeTarget "FreeGames-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7587321279F58B0006C0A64 /* Debug */,
+				C7587322279F58B0006C0A64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7587323279F58B0006C0A64 /* Build configuration list for PBXNativeTarget "FreeGames-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7587324279F58B0006C0A64 /* Debug */,
+				C7587325279F58B0006C0A64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7587326279F58B0006C0A64 /* Build configuration list for PBXNativeTarget "FreeGames-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7587327279F58B0006C0A64 /* Debug */,
+				C7587328279F58B0006C0A64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C75872EE279F58AD006C0A64 /* Project object */;
+}
