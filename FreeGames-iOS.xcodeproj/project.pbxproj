@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				C758733D279F6CE8006C0A64 /* Utils */,
-				C7587329279F5A52006C0A64 /* Sections */,
+				C7587329279F5A52006C0A64 /* Modules */,
 				C75872F9279F58AD006C0A64 /* AppDelegate.swift */,
 				C75872FB279F58AD006C0A64 /* SceneDelegate.swift */,
 				C7587302279F58B0006C0A64 /* Assets.xcassets */,
@@ -187,13 +187,13 @@
 			path = "FreeGames-iOSUITests";
 			sourceTree = "<group>";
 		};
-		C7587329279F5A52006C0A64 /* Sections */ = {
+		C7587329279F5A52006C0A64 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
 				C758732A279F5D46006C0A64 /* GamesController */,
 				C758732B279F5D80006C0A64 /* InitialControllerBuilder.swift */,
 			);
-			path = Sections;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		C758732A279F5D46006C0A64 /* GamesController */ = {
@@ -214,9 +214,9 @@
 			children = (
 				C75872FF279F58AD006C0A64 /* Main.storyboard */,
 				C75872FD279F58AD006C0A64 /* ViewController.swift */,
-				C7587333279F6326006C0A64 /* GamesCollectionViewCell.swift */,
 				C7587341279F7362006C0A64 /* ListGamesViewController.storyboard */,
 				C7587343279F7387006C0A64 /* ListGamesViewController.swift */,
+				C7587333279F6326006C0A64 /* GamesCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

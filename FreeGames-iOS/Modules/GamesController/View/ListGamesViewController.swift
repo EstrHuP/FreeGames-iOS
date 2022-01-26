@@ -40,13 +40,11 @@ extension ListGamesViewController {
         layout.minimumInteritemSpacing = 10
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 30, right: 10)
         
-        //Calcular espacio de las celdas (en este caso se mostrarán 2)
-        let width = (gamesCollectionView.frame.width / 2) //ancho
-        let total = width - (layout.minimumInteritemSpacing / 2) //interitemSpacing
-        let totalIzq = total - layout.sectionInset.left //izquierdo
+        let width = (gamesCollectionView.frame.width / 2)
+        let total = width - (layout.minimumInteritemSpacing / 2)
+        let totalLeading = total - layout.sectionInset.left
         
-        //layout.estimatedItemSize = CGSize(width: totalIzq, height: totalIzq)
-        layout.itemSize = CGSize(width: totalIzq, height: totalIzq)
+        layout.itemSize = CGSize(width: totalLeading, height: totalLeading)
         
         return layout
     }

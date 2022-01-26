@@ -22,7 +22,11 @@ struct Game: Decodable {
 }
 
 extension Game {
+    var gameImageUrl: URL? {
+        return URL(string: "https://www.freetogame.com/g/\(id)/thumbnail.jpg")
+    }
+    
     var toListGamesCellViewModel: GamesCollectionCellViewModel {
-        GamesCollectionCellViewModel(name: title)
+        GamesCollectionCellViewModel(name: title, image: gameImageUrl, genre: genre)
     }
 }
