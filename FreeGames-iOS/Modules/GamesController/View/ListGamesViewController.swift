@@ -11,12 +11,10 @@ class ListGamesViewController: UIViewController, GamesViewContract {
     
     var presenter: GamesPresenterContract?
     
-//    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var gamesCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        configureView()
         presenter?.viewDidLoad()
     }
     
@@ -28,20 +26,11 @@ class ListGamesViewController: UIViewController, GamesViewContract {
     func reloadData() {
         DispatchQueue.main.async {
             self.gamesCollectionView.reloadData()
-//            self.indicatorView.stopAnimating()
-//            self.indicatorView.isHidden = true
         }
     }
 }
 
 extension ListGamesViewController {
-//    private func configureView() {
-//        self.indicatorView.startAnimating()
-//        self.indicatorView.isHidden = false
-//    }
-    static func createFromStoryBoard() -> ListGamesViewController {
-        return UIStoryboard(name: "ListGamesViewController", bundle: .main).instantiateViewController(withIdentifier: "ListGamesViewController") as! ListGamesViewController
-    }
     
     private var layout: UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
