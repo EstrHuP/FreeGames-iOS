@@ -9,19 +9,18 @@ import Foundation
 import Alamofire
 
 class GamesListInteractor: GamesInteractorContract {
-    var output: GamesInteractorOutputContract?
     
-    func fetchGames() {
-        let url = ServicesConstants.baseURL
-        let request = URLRequest(url: NSURL(string: url)! as URL)
-        
-        AF.request(request).responseDecodable { (response: DataResponse<[Game], AFError>) in
-            switch response.result {
+    weak var output: GamesInteractorOutputContract?
+    
+    var gamesProvider: GamesListProviderContract?
+    
+    func fetchAllGames() {
+        gamesProvider?.getAllGames({ result in
+            switch result {
             case .success(let games):
                 self.output?.didFetchGames(games: games)
-                print(games)
             case .failure: self.output?.didFailed()
             }
-        }.validate()
+        })
     }
 }

@@ -11,22 +11,20 @@ import Kingfisher
 struct GamesCollectionCellViewModel {
     let name: String
     let image: URL?
+    let description: String
     let genre: String
+    let type: String
 }
 
 class GamesCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var gameTitle: UILabel!
+    @IBOutlet weak var gameTitleLabel: UILabel!
     @IBOutlet weak var gameImage: UIImageView!
-    @IBOutlet weak var genreView: UIView!
-    @IBOutlet weak var genreLabel: UILabel!
-    @IBOutlet weak var platformImage: UIImageView!
     
     func configure(viewModel: GamesCollectionCellViewModel) {
-        gameTitle.text = viewModel.name
         gameImage.kf.indicatorType = .activity
         gameImage.kf.setImage(with: viewModel.image)
-        genreLabel.text = viewModel.genre
+        gameTitleLabel.text = viewModel.name
         cardDesign()
     }
 }

@@ -26,10 +26,11 @@ protocol GamesPresenterContract: AnyObject {
 
 protocol GamesInteractorContract {
     var output: GamesInteractorOutputContract? {get set}
-    func fetchGames()
+    var gamesProvider: GamesListProviderContract? {get set}
+    func fetchAllGames()
 }
 
-protocol GamesInteractorOutputContract {
+protocol GamesInteractorOutputContract: AnyObject {
     func didFetchGames(games: [Game])
     func didFailed()
 }

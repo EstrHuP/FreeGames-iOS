@@ -27,6 +27,6 @@ extension Game {
     }
     
     var toListGamesCellViewModel: GamesCollectionCellViewModel {
-        GamesCollectionCellViewModel(name: title, image: gameImageUrl, genre: genre)
+        GamesCollectionCellViewModel(name: title, image: gameImageUrl, description: short_description, genre: genre, type: platform)
     }
 }

@@ -16,6 +16,7 @@ class GamesControllerBuilder {
         //VIPER
         let presenter = GamesListPresenter()
         let interactor = GamesListInteractor()
+        interactor.gamesProvider = NetworkGamesListProvider()
         
         viewController.presenter = presenter
         presenter.view = viewController

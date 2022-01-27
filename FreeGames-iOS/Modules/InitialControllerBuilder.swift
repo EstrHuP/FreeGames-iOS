@@ -10,7 +10,26 @@ import UIKit
 
 class InitialControllerBuilder {
     func build() -> UIViewController {
-        let viewController = GamesControllerBuilder().build()
-        return viewController
+        let tabBarController = UITabBarController()
+        let viewControllers = [buildGamesCollection()]
+        tabBarController.setViewControllers(viewControllers, animated: false)
+        
+        return tabBarController
+    }
+}
+
+private extension InitialControllerBuilder {
+    func buildGamesCollection() -> UINavigationController {
+        let collectionViewController = GamesControllerBuilder().build()
+        let collectionTabBarItem = UITabBarItem(title: "All games", image: .init(systemName: "calendar"), tag: 0)
+        
+        return buildNavigation(with: collectionViewController, tabBarItem: collectionTabBarItem)
+    }
+    
+    func buildNavigation(with viewController: UIViewController, tabBarItem: UITabBarItem) -> UINavigationController {
+        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.tabBarItem = tabBarItem
+        
+        return navigationController
     }
 }

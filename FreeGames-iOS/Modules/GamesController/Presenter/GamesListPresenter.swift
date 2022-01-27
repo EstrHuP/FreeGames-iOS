@@ -8,7 +8,7 @@
 import Foundation
 
 class GamesListPresenter: GamesPresenterContract {
-    var view: GamesViewContract?
+    weak var view: GamesViewContract?
     var interactor: GamesInteractorContract?
     
     private var games = [Game]() {
@@ -19,7 +19,7 @@ class GamesListPresenter: GamesPresenterContract {
     
     func viewDidLoad() {
         interactor?.output = self
-        interactor?.fetchGames()
+        interactor?.fetchAllGames()
     }
     
     var numGamesRow: Int {
