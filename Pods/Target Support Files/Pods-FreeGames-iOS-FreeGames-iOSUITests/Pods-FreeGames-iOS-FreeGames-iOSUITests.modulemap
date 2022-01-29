@@ -1,0 +1,6 @@
+framework module Pods_FreeGames_iOS_FreeGames_iOSUITests {
+  umbrella header "Pods-FreeGames-iOS-FreeGames-iOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
