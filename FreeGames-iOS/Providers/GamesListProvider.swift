@@ -25,9 +25,7 @@ class NetworkGamesListProvider: GamesListProviderContract {
     }
     
     func getAllGames(_ completion: @escaping (Result<[Game], GamesListProviderError>) -> ()) {
-        let url = ServicesConstants.baseURL
-        
-        let request = URLRequest(url: NSURL(string: url)! as URL)
+        let request = URLRequest(url: Bundle.main.baseAPIUrl)
         session.request(request).responseDecodable { [weak self] (response: DataResponse<[Game], AFError>) in
             switch response.result {
             case .success(let games):
