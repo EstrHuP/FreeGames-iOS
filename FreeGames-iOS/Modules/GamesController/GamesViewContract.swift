@@ -22,6 +22,7 @@ protocol GamesPresenterContract: AnyObject {
     
     var numGamesRow: Int {get}
     func cellGamesViewModel(at indexPath: IndexPath) -> GamesCollectionCellViewModel
+    func didSelectGameDetail(at indexPath: IndexPath)
 }
 
 protocol GamesInteractorContract {
@@ -33,5 +34,10 @@ protocol GamesInteractorContract {
 protocol GamesInteractorOutputContract: AnyObject {
     func didFetchGames(games: [Game])
     func didFailed()
+}
+
+protocol GamesListWireframeContract {
+    var view: UIViewController? {get set}
+    func navigate(to game: Game)
 }
 

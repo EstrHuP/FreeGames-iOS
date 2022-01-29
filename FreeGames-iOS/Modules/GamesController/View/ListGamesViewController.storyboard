@@ -72,6 +72,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="twg-Kj-XM4" id="0q6-6Y-eeQ"/>
+                                    <outlet property="delegate" destination="twg-Kj-XM4" id="Xgx-Uy-jf9"/>
                                 </connections>
                             </collectionView>
                         </subviews>

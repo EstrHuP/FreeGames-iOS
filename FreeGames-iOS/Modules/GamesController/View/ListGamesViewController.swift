@@ -31,7 +31,6 @@ class ListGamesViewController: UIViewController, GamesViewContract {
 }
 
 extension ListGamesViewController {
-    
     private var layout: UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 10
@@ -60,5 +59,11 @@ extension ListGamesViewController: UICollectionViewDataSource {
         cell.configure(viewModel: listGamesViewModel)
         
         return cell
+    }
+}
+
+extension ListGamesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter?.didSelectGameDetail(at: indexPath)
     }
 }

@@ -12,6 +12,10 @@
 		4B289FCD0575F8064582FCEE /* Pods_FreeGames_iOS_FreeGames_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0985A8314D2B69AE23E2F260 /* Pods_FreeGames_iOS_FreeGames_iOSUITests.framework */; };
 		C70A350027A2B83000118998 /* GamesListProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70A34FF27A2B83000118998 /* GamesListProvider.swift */; };
 		C70A350327A2C5A700118998 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70A350227A2C5A700118998 /* UIViewControllerExtension.swift */; };
+		C70A350727A2C7FD00118998 /* GameDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70A350627A2C7FC00118998 /* GameDetailViewController.storyboard */; };
+		C70A350927A2C81900118998 /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70A350827A2C81900118998 /* GameDetailViewController.swift */; };
+		C70A350C27A2D33100118998 /* GamesListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70A350B27A2D33100118998 /* GamesListWireframe.swift */; };
+		C70A350E27A2D39400118998 /* GameDetailControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70A350D27A2D39400118998 /* GameDetailControllerBuilder.swift */; };
 		C75872FA279F58AD006C0A64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75872F9279F58AD006C0A64 /* AppDelegate.swift */; };
 		C75872FC279F58AD006C0A64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75872FB279F58AD006C0A64 /* SceneDelegate.swift */; };
 		C7587303279F58B0006C0A64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7587302279F58B0006C0A64 /* Assets.xcassets */; };
@@ -57,6 +61,10 @@
 		9F83AE252800A6C6B4687B17 /* Pods-FreeGames-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeGames-iOSTests.debug.xcconfig"; path = "Target Support Files/Pods-FreeGames-iOSTests/Pods-FreeGames-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C70A34FF27A2B83000118998 /* GamesListProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListProvider.swift; sourceTree = "<group>"; };
 		C70A350227A2C5A700118998 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		C70A350627A2C7FC00118998 /* GameDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameDetailViewController.storyboard; sourceTree = "<group>"; };
+		C70A350827A2C81900118998 /* GameDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
+		C70A350B27A2D33100118998 /* GamesListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesListWireframe.swift; sourceTree = "<group>"; };
+		C70A350D27A2D39400118998 /* GameDetailControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailControllerBuilder.swift; sourceTree = "<group>"; };
 		C75872F6279F58AD006C0A64 /* FreeGames-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FreeGames-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C75872F9279F58AD006C0A64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C75872FB279F58AD006C0A64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +158,32 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C70A350427A2C7B100118998 /* GameDetailController */ = {
+			isa = PBXGroup;
+			children = (
+				C70A350527A2C7D900118998 /* View */,
+				C70A350D27A2D39400118998 /* GameDetailControllerBuilder.swift */,
+			);
+			path = GameDetailController;
+			sourceTree = "<group>";
+		};
+		C70A350527A2C7D900118998 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C70A350627A2C7FC00118998 /* GameDetailViewController.storyboard */,
+				C70A350827A2C81900118998 /* GameDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C70A350A27A2D31700118998 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				C70A350B27A2D33100118998 /* GamesListWireframe.swift */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
 		C75872ED279F58AD006C0A64 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +241,7 @@
 		C7587329279F5A52006C0A64 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C70A350427A2C7B100118998 /* GameDetailController */,
 				C758732A279F5D46006C0A64 /* GamesController */,
 				C758732B279F5D80006C0A64 /* InitialControllerBuilder.swift */,
 			);
@@ -220,6 +255,7 @@
 				C758732E279F5ED2006C0A64 /* Interactor */,
 				C758732F279F5EDB006C0A64 /* Presenter */,
 				C7587330279F5F0A006C0A64 /* Entity */,
+				C70A350A27A2D31700118998 /* Wireframe */,
 				C7587335279F63B3006C0A64 /* GamesControllerBuilder.swift */,
 				C7587337279F63C3006C0A64 /* GamesViewContract.swift */,
 			);
@@ -388,6 +424,7 @@
 			files = (
 				C7587342279F7362006C0A64 /* ListGamesViewController.storyboard in Resources */,
 				C7587306279F58B0006C0A64 /* LaunchScreen.storyboard in Resources */,
+				C70A350727A2C7FD00118998 /* GameDetailViewController.storyboard in Resources */,
 				C7587303279F58B0006C0A64 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,9 +560,12 @@
 				C7587336279F63B3006C0A64 /* GamesControllerBuilder.swift in Sources */,
 				C7587344279F7387006C0A64 /* ListGamesViewController.swift in Sources */,
 				C75872FA279F58AD006C0A64 /* AppDelegate.swift in Sources */,
+				C70A350C27A2D33100118998 /* GamesListWireframe.swift in Sources */,
+				C70A350927A2C81900118998 /* GameDetailViewController.swift in Sources */,
 				C7587340279F6D00006C0A64 /* ServiceConstants.swift in Sources */,
 				C758732C279F5D80006C0A64 /* InitialControllerBuilder.swift in Sources */,
 				C70A350327A2C5A700118998 /* UIViewControllerExtension.swift in Sources */,
+				C70A350E27A2D39400118998 /* GameDetailControllerBuilder.swift in Sources */,
 				C7587332279F5F3F006C0A64 /* Game.swift in Sources */,
 				C7587334279F6326006C0A64 /* GamesCollectionViewCell.swift in Sources */,
 				C75872FC279F58AD006C0A64 /* SceneDelegate.swift in Sources */,

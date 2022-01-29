@@ -18,9 +18,13 @@ class GamesControllerBuilder {
         let interactor = GamesListInteractor()
         interactor.gamesProvider = NetworkGamesListProvider()
         
+        let wireframe = GamesListWireframe()
+        
         viewController.presenter = presenter
         presenter.view = viewController
         presenter.interactor = interactor
+        presenter.wireframe = wireframe
+        wireframe.view = viewController
         
         return viewController
         

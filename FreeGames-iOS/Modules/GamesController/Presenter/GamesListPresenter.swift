@@ -10,6 +10,7 @@ import Foundation
 class GamesListPresenter: GamesPresenterContract {
     weak var view: GamesViewContract?
     var interactor: GamesInteractorContract?
+    var wireframe: GamesListWireframeContract?
     
     private var games = [Game]() {
         didSet {
@@ -29,6 +30,11 @@ class GamesListPresenter: GamesPresenterContract {
     func cellGamesViewModel(at indexPath: IndexPath) -> GamesCollectionCellViewModel {
         let game = games[indexPath.row]
         return game.toListGamesCellViewModel
+    }
+    
+    func didSelectGameDetail(at indexPath: IndexPath) {
+        let game = games[indexPath.row]
+        wireframe?.navigate(to: game)
     }
 }
 
