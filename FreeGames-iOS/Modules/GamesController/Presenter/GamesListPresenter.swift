@@ -8,9 +8,16 @@
 import Foundation
 
 class GamesListPresenter: GamesPresenterContract {
+    
     weak var view: GamesViewContract?
     var interactor: GamesInteractorContract?
     var wireframe: GamesListWireframeContract?
+    
+    private var detailGame: GameDetail? {
+        didSet {
+            view?.reloadData()
+        }
+    }
     
     private var games = [Game]() {
         didSet {
@@ -33,18 +40,26 @@ class GamesListPresenter: GamesPresenterContract {
     }
     
     func didSelectGameDetail(at indexPath: IndexPath) {
-        let game = games[indexPath.row]
-        wireframe?.navigate(to: game)
+        let gameId = games[indexPath.row].id
+        interactor?.fetchDetailGame(id: gameId)
     }
 }
 
 extension GamesListPresenter: GamesInteractorOutputContract {
+    func didFetchGameDetail(gameDetail: GameDetail) {
+        self.detailGame = gameDetail
+        wireframe?.navigate(to: gameDetail)
+    }
+    
+    func didFailedDetail() {
+        print("Error in Detail Screen")
+    }
+    
     func didFetchGames(games: [Game]) {
         self.games = games
     }
     
     func didFailed() {
-        //TODO: Mejorar mensaje de error
-        print("Error")
+        print("Error in All games Screen")
     }
 }

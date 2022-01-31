@@ -11,14 +11,12 @@ import UIKit
 class GamesListWireframe: GamesListWireframeContract {
     weak var view: UIViewController?
     
-    func navigate(to game: Game) {
-        DispatchQueue.main.async {
-            let detail = GameDetailControllerBuilder().build(viewModel: GameDetailViewModel.init(name: game.title, image: game.gameImageUrl))
-            if let navigationController = self.view?.navigationController {
-                navigationController.pushViewController(detail, animated: true)
-            } else {
-                self.view?.present(detail, animated: false)
-            }
+    func navigate(to gameDetail: GameDetail) {
+        let detail = GameDetailControllerBuilder().build(viewModel: GameDetailViewModel.init(name: gameDetail.title, image: gameDetail.gameDetailImageUrl, descrip: gameDetail.description))
+        if let navigationController = self.view?.navigationController {
+            navigationController.pushViewController(detail, animated: true)
+        } else {
+            self.view?.present(detail, animated: false)
         }
     }
 }

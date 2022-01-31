@@ -27,17 +27,21 @@ protocol GamesPresenterContract: AnyObject {
 
 protocol GamesInteractorContract {
     var output: GamesInteractorOutputContract? {get set}
-    var gamesProvider: GamesListProviderContract? {get set}
+    var gamesProvider: GameProviderContract? {get set}
     func fetchAllGames()
+    func fetchDetailGame(id: Int)
 }
 
 protocol GamesInteractorOutputContract: AnyObject {
     func didFetchGames(games: [Game])
     func didFailed()
+    
+    func didFetchGameDetail(gameDetail: GameDetail)
+    func didFailedDetail()
 }
 
 protocol GamesListWireframeContract {
     var view: UIViewController? {get set}
-    func navigate(to game: Game)
+    func navigate(to gameDetail: GameDetail)
 }
 

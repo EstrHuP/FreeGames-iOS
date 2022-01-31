@@ -8,7 +8,9 @@
 import Foundation
 
 struct ServicesConstants {
+    static let shared = ServicesConstants()
     
-    //MARK: URL
-    static let baseURL: String = "https://www.freetogame.com/api/games"
+    //MARK: URLs
+    let allGames: String = "s"
+    let gameId: String = "?id="
 }
