@@ -13,11 +13,7 @@ class GamesListPresenter: GamesPresenterContract {
     var interactor: GamesInteractorContract?
     var wireframe: GamesListWireframeContract?
     
-    private var detailGame: GameDetail? {
-        didSet {
-            view?.reloadData()
-        }
-    }
+    private var detailGame: GameDetail?
     
     private var games = [Game]() {
         didSet {
@@ -41,6 +37,7 @@ class GamesListPresenter: GamesPresenterContract {
     
     func didSelectGameDetail(at indexPath: IndexPath) {
         let gameId = games[indexPath.row].id
+        interactor?.output = self
         interactor?.fetchDetailGame(id: gameId)
     }
 }
