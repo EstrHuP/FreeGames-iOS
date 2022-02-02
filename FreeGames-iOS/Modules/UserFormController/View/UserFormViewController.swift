@@ -107,9 +107,7 @@ extension UserFormViewController {
     
     func showValidationError() {
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Error de validación", message: "Por favor, revisa los campos para poder continuar", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default))
-            self.present(alert, animated: true)
+            self.presentAlert(withTitle: "Error", message: "Por favor, introduzca valor en todos los campos")
         }
     }
     
