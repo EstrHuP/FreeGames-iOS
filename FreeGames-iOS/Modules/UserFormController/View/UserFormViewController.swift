@@ -19,10 +19,13 @@ class UserFormViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var lastNameLabel: UILabel!
-    @IBOutlet weak var phoneLabel: UILabel!
-    @IBOutlet weak var mailLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel! { didSet { titleLabel.text = "user_form_title_label".localized }}
+    @IBOutlet weak var subTitleLabel: UILabel! { didSet { subTitleLabel.text = "user_form_subTitle_label".localized }}
+    @IBOutlet weak var nameLabel: UILabel! { didSet { nameLabel.text = "user_form_name_label".localized }}
+    @IBOutlet weak var lastNameLabel: UILabel! { didSet { lastNameLabel.text = "user_form_lastName_label".localized }}
+    @IBOutlet weak var phoneLabel: UILabel! { didSet { phoneLabel.text = "user_form_phone_label".localized }}
+    @IBOutlet weak var mailLabel: UILabel! { didSet { mailLabel.text = "user_form_mail_label".localized }}
+    @IBOutlet weak var saveButton: UIButton! { didSet { saveButton.setTitle( "user_form_save_button".localized, for: .normal) }}
     
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var lastNameInput: UITextField!

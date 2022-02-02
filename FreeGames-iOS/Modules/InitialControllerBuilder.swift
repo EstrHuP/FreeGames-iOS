@@ -21,14 +21,14 @@ class InitialControllerBuilder {
 private extension InitialControllerBuilder {
     func buildGamesCollection() -> UINavigationController {
         let collectionViewController = GamesControllerBuilder().build()
-        let collectionTabBarItem = UITabBarItem(title: "All games", image: .init(systemName: "calendar"), tag: 0)
+        let collectionTabBarItem = UITabBarItem(title: "tabbar_games".localized, image: .init(systemName: "calendar"), tag: 0)
         
         return buildNavigation(with: collectionViewController, tabBarItem: collectionTabBarItem)
     }
     
     func buildUserForm() -> UINavigationController {
         let formViewController = UserFormBuilder().build()
-        let formTabBarItem = UITabBarItem(title: "My profile", image: .init(systemName: "person.circle"), tag: 1)
+        let formTabBarItem = UITabBarItem(title: "tabbar_userProfile".localized, image: .init(systemName: "person.circle"), tag: 1)
         
         return buildNavigation(with: formViewController, tabBarItem: formTabBarItem)
     }

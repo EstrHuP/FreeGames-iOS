@@ -12,6 +12,7 @@ class GamesControllerBuilder {
     func build() -> UIViewController {
         
         let viewController = ListGamesViewController.createFromStoryBoard()
+        viewController.title = "navigation_games_title".localized
         
         //VIPER
         let presenter = GamesListPresenter()

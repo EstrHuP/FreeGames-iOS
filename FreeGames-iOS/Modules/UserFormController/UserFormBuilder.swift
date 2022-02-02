@@ -11,6 +11,7 @@ import UIKit
 class UserFormBuilder {
     func build() -> UIViewController {
         let viewController = UserFormViewController.createFromStoryBoard()
+        viewController.title = "navigation_userProfile_title".localized
         
         let presenter = UserFormPresenter()
         let interactor = UserFormInteractor()

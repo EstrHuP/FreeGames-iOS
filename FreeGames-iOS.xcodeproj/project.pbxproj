@@ -41,6 +41,8 @@
 		C76CB4D727A954C700A3D65C /* UserFormInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CB4D627A954C700A3D65C /* UserFormInteractor.swift */; };
 		C76CB4DA27A9838F00A3D65C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CB4D927A9838F00A3D65C /* User.swift */; };
 		C76CB4DC27A98A9500A3D65C /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CB4DB27A98A9500A3D65C /* UserProvider.swift */; };
+		C798E0D627AB238600E32C3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C798E0D827AB238600E32C3F /* Localizable.strings */; };
+		C798E0DC27AB256700E32C3F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798E0DB27AB256700E32C3F /* StringExtensions.swift */; };
 		C7DDAADE27A5B24800F0EF71 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DDAADD27A5B24800F0EF71 /* BundleExtensions.swift */; };
 		C7DDAAE027A5B96F00F0EF71 /* GameDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DDAADF27A5B96F00F0EF71 /* GameDetail.swift */; };
 /* End PBXBuildFile section */
@@ -104,6 +106,9 @@
 		C76CB4D627A954C700A3D65C /* UserFormInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormInteractor.swift; sourceTree = "<group>"; };
 		C76CB4D927A9838F00A3D65C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C76CB4DB27A98A9500A3D65C /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
+		C798E0D727AB238600E32C3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C798E0DA27AB23CE00E32C3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C798E0DB27AB256700E32C3F /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		C7DDAADD27A5B24800F0EF71 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		C7DDAADF27A5B96F00F0EF71 /* GameDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetail.swift; sourceTree = "<group>"; };
 		DDF7B94C8763D0C65035F688 /* Pods_FreeGames_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeGames_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +181,7 @@
 			children = (
 				C70A350227A2C5A700118998 /* UIViewControllerExtension.swift */,
 				C7DDAADD27A5B24800F0EF71 /* BundleExtensions.swift */,
+				C798E0DB27AB256700E32C3F /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 				C7587302279F58B0006C0A64 /* Assets.xcassets */,
 				C7587304279F58B0006C0A64 /* LaunchScreen.storyboard */,
 				C7587307279F58B0006C0A64 /* Info.plist */,
+				C798E0D227AB22CB00E32C3F /* Supporting files */,
 			);
 			path = "FreeGames-iOS";
 			sourceTree = "<group>";
@@ -407,6 +414,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C798E0D227AB22CB00E32C3F /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				C798E0D827AB238600E32C3F /* Localizable.strings */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		C7E78E5227A869F600A25568 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +521,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = C75872ED279F58AD006C0A64;
 			productRefGroup = C75872F7279F58AD006C0A64 /* Products */;
@@ -525,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7587342279F7362006C0A64 /* ListGamesViewController.storyboard in Resources */,
+				C798E0D627AB238600E32C3F /* Localizable.strings in Resources */,
 				C7587306279F58B0006C0A64 /* LaunchScreen.storyboard in Resources */,
 				C76CB4C727A9488400A3D65C /* UserFormViewController.storyboard in Resources */,
 				C70A350727A2C7FD00118998 /* GameDetailViewController.storyboard in Resources */,
@@ -680,6 +697,7 @@
 				C76CB4DA27A9838F00A3D65C /* User.swift in Sources */,
 				C7DDAAE027A5B96F00F0EF71 /* GameDetail.swift in Sources */,
 				C75872FC279F58AD006C0A64 /* SceneDelegate.swift in Sources */,
+				C798E0DC27AB256700E32C3F /* StringExtensions.swift in Sources */,
 				C76CB4D727A954C700A3D65C /* UserFormInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -725,6 +743,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		C798E0D827AB238600E32C3F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C798E0D727AB238600E32C3F /* en */,
+				C798E0DA27AB23CE00E32C3F /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -732,6 +759,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -793,6 +821,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

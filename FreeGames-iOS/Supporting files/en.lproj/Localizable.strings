@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  FreeGames-iOS
+
+  Created by Esther Huecas on 2/2/22.
+  
+*/
+
+//TAB BAR
+"tabbar_games" = "Games";
+"tabbar_userProfile" = "My profile";
+
+//NAVIGATION
+"navigation_games_title" = "Free games";
+"navigation_userProfile_title" = "My profile";
+
+//USER FORM
+"user_form_title_label" = "My user data";
+"user_form_subTitle_label" = "About me";
+"user_form_name_label" = "Name";
+"user_form_lastName_label" = "Last name";
+"user_form_phone_label" = "Phone";
+"user_form_mail_label" = "Mail";
+"user_form_save_button" = "Save";

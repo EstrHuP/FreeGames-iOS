@@ -234,7 +234,10 @@
                         <outlet property="nameLabel" destination="Tb0-Sa-fdf" id="ssV-wA-NcB"/>
                         <outlet property="phoneInput" destination="Z2A-6R-dXE" id="Ua0-cn-avj"/>
                         <outlet property="phoneLabel" destination="dle-Tf-EpO" id="nay-fs-7u6"/>
+                        <outlet property="saveButton" destination="FrR-Ox-RB6" id="PhR-hl-JAf"/>
                         <outlet property="scrollView" destination="HCx-Ym-uIO" id="SFy-Ei-Eow"/>
+                        <outlet property="subTitleLabel" destination="Wax-V1-yGJ" id="zlz-eb-qoC"/>
+                        <outlet property="titleLabel" destination="x0e-Ma-wlI" id="6cm-nc-qwl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
