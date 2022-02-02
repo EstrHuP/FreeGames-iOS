@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol GamesViewContract: UIViewController {
-    var presenter: GamesPresenterContract? {set get}
+    var presenter: GamesPresenterContract? {get set}
     
     func reloadData()
 }

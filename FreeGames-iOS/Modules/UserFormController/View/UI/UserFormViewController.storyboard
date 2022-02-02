@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGm-m6-DQU">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="511"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="562"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qjh-Zh-fy7">
-                                                <rect key="frame" x="15" y="30" width="384" height="451"/>
+                                                <rect key="frame" x="15" y="30" width="384" height="502"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydQ-ar-LKu">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="20.5"/>
@@ -59,6 +59,9 @@
                                                                         <rect key="frame" x="89" y="0.0" width="295" height="30"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
+                                                                        <connections>
+                                                                            <action selector="inputDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="4GW-Zw-0WQ"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                                 <constraints>
@@ -78,6 +81,9 @@
                                                                         <rect key="frame" x="89" y="0.0" width="295" height="30"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="family-name"/>
+                                                                        <connections>
+                                                                            <action selector="inputDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="yK2-vx-pYf"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                                 <constraints>
@@ -97,6 +103,9 @@
                                                                         <rect key="frame" x="89" y="0.0" width="295" height="30"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                                                        <connections>
+                                                                            <action selector="inputDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="wN6-A0-j2s"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                                 <constraints>
@@ -116,6 +125,9 @@
                                                                         <rect key="frame" x="89" y="0.0" width="295" height="30"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                                                        <connections>
+                                                                            <action selector="inputDidChange:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="dib-DE-tJb"/>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                                 <constraints>
@@ -157,6 +169,26 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bO7-i1-UKT">
+                                                        <rect key="frame" x="0.0" y="471" width="384" height="31"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFQ-N0-lGg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="31"/>
+                                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Edit"/>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrR-Ox-RB6">
+                                                                <rect key="frame" x="207" y="0.0" width="177" height="31"/>
+                                                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                                                <connections>
+                                                                    <action selector="saveAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="sZ3-6k-EzY"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -178,6 +210,9 @@
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="3mt-p9-8QP"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="ire-pE-iwF"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8Fp-7Y-NdQ" appends="YES" id="5EG-CU-pUa"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -189,8 +224,25 @@
                             <constraint firstItem="HCx-Ym-uIO" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="f45-cO-KY1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bioTextArea" destination="8FQ-P9-gt0" id="REW-ML-zHY"/>
+                        <outlet property="lastNameInput" destination="ExF-XF-a4l" id="WSt-pc-gy0"/>
+                        <outlet property="lastNameLabel" destination="p7b-8N-JmC" id="BFa-kO-RVT"/>
+                        <outlet property="mailInput" destination="fQ3-Rl-9ER" id="llb-GR-Imt"/>
+                        <outlet property="mailLabel" destination="9Ar-ka-pvI" id="HfP-mL-uS4"/>
+                        <outlet property="nameInput" destination="Nao-eH-9Qd" id="TWd-wD-SpD"/>
+                        <outlet property="nameLabel" destination="Tb0-Sa-fdf" id="ssV-wA-NcB"/>
+                        <outlet property="phoneInput" destination="Z2A-6R-dXE" id="Ua0-cn-avj"/>
+                        <outlet property="phoneLabel" destination="dle-Tf-EpO" id="nay-fs-7u6"/>
+                        <outlet property="scrollView" destination="HCx-Ym-uIO" id="SFy-Ei-Eow"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="8Fp-7Y-NdQ">
+                    <connections>
+                        <action selector="scrollViewTapped:" destination="Y6W-OH-hqX" id="uDJ-Ht-CXp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="75"/>
         </scene>
@@ -201,6 +253,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

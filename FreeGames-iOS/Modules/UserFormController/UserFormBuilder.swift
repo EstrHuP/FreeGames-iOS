@@ -13,9 +13,12 @@ class UserFormBuilder {
         let viewController = UserFormViewController.createFromStoryBoard()
         
         let presenter = UserFormPresenter()
+        let interactor = UserFormInteractor()
+        interactor.userProvider = NetworkUserProvider()
         
-        presenter.view = viewController
         viewController.presenter = presenter
+        presenter.view = viewController
+        presenter.interactor = interactor
         
         return viewController
     }
