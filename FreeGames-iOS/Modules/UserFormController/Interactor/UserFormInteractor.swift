@@ -38,7 +38,7 @@ class UserFormInteractor: UserFormInteractorContract {
     func fetchSaveDataUser(user: User) {
         userProvider?.saveDataUser(for: user, with: fileUrl, { result in
             switch result {
-            case .success(let saveDataUser):
+            case .success:
                 self.output?.didFetchSaveDataUser(user: user)
             case .failure: self.output?.didFailedSaveDataUser()
             }
