@@ -19,6 +19,10 @@ class UserFormViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var nameErrorLabel: UILabel! { didSet { nameErrorLabel.isHidden = true; nameErrorLabel.text = "user_form_field_required".localized }}
+    @IBOutlet weak var lastNameErrorLabel: UILabel! { didSet { lastNameErrorLabel.isHidden = true; lastNameErrorLabel.text = "user_form_field_required".localized }}
+    @IBOutlet weak var phoneErrorLabel: UILabel! { didSet { phoneErrorLabel.isHidden = true; phoneErrorLabel.text = "user_form_field_required".localized }}
+    @IBOutlet weak var mailErrorLabel: UILabel! { didSet { mailErrorLabel.isHidden = true; mailErrorLabel.text = "user_form_field_required".localized }}
     @IBOutlet weak var titleLabel: UILabel! { didSet { titleLabel.text = "user_form_title_label".localized }}
     @IBOutlet weak var subTitleLabel: UILabel! { didSet { subTitleLabel.text = "user_form_subTitle_label".localized }}
     @IBOutlet weak var nameLabel: UILabel! { didSet { nameLabel.text = "user_form_name_label".localized }}
@@ -76,20 +80,21 @@ extension UserFormViewController: UserFormViewContract {
         }
     }
     
-    func didValidateName(_ valid: Bool) {
-        didUpdateValidation(input: nameInput, valid: valid)
+    func didValidateName(_ valid: Bool) { didUpdateValidation(label: nameErrorLabel, input: nameInput, valid: valid) }
+    func didValidateLastName(_ valid: Bool) { didUpdateValidation(label: lastNameErrorLabel, input: lastNameInput, valid: valid) }
+    func didValidatePhone(_ valid: Bool) { didUpdateValidation(label: phoneErrorLabel, input: phoneInput, valid: valid) }
+    func didValidateMail(_ valid: Bool) { didUpdateValidation(label: mailErrorLabel, input: mailInput, valid: valid) }
+    
+    func showValidationError() {
+        DispatchQueue.main.async {
+            self.presentAlert(withTitle: "user_form_alert_save_error_title".localized, message: "user_form_alert_save_error_body".localized)
+        }
     }
     
-    func didValidateLastName(_ valid: Bool) {
-        didUpdateValidation(input: lastNameInput, valid: valid)
-    }
-    
-    func didValidatePhone(_ valid: Bool) {
-        didUpdateValidation(input: phoneInput, valid: valid)
-    }
-    
-    func didValidateMail(_ valid: Bool) {
-        didUpdateValidation(input: mailInput, valid: valid)
+    func showSuccessSave() {
+        DispatchQueue.main.async {
+            self.presentAlert(withTitle: "user_form_alert_save_title".localized, message: "user_form_alert_save_body".localized)
+        }
     }
 }
 
@@ -102,15 +107,10 @@ extension UserFormViewController {
         }
     }
     
-    private func didUpdateValidation(input: UITextField, valid: Bool) {
+    private func didUpdateValidation(label: UILabel, input: UITextField, valid: Bool) {
         DispatchQueue.main.async {
+            label.isHidden = valid ? true : false
             input.backgroundColor = valid ? .systemBackground : .systemRed
-        }
-    }
-    
-    func showValidationError() {
-        DispatchQueue.main.async {
-            self.presentAlert(withTitle: "Error", message: "Por favor, introduzca valor en todos los campos")
         }
     }
     
@@ -140,13 +140,12 @@ extension UserFormViewController: UITextFieldDelegate {
         textFieldDidChange(textField)
     }
     
-    //return button in keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case nameInput: lastNameInput.becomeFirstResponder()
         case lastNameInput: phoneInput.becomeFirstResponder()
         case phoneInput: mailInput.becomeFirstResponder()
-        case mailInput: textField.resignFirstResponder() // hide keyboard
+        case mailInput: textField.resignFirstResponder()
         default: break
         }
         return true

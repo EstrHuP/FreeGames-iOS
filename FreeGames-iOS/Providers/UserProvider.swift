@@ -49,7 +49,7 @@ class NetworkUserProvider: UserProviderContract {
         do {
             let data = try encoder.encode(user)
             try data.write(to: url)
-            print("success save in userProvider")
-        } catch { print("error to save in UserProvider") }
+            completion(.success(user))
+        } catch { completion(.failure(error)) }
     }
 }

@@ -19,6 +19,7 @@ protocol UserFormViewContract: UIViewController {
     func didValidateMail(_ valid: Bool)
     
     func showValidationError()
+    func showSuccessSave()
 }
 
 protocol UserFormPresenterContract: AnyObject {

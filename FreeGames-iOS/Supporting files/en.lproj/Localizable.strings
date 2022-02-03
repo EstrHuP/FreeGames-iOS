@@ -15,6 +15,7 @@
 "navigation_userProfile_title" = "My profile";
 
 //USER FORM
+"user_form_field_required" = "Required";
 "user_form_title_label" = "My user data";
 "user_form_subTitle_label" = "About me";
 "user_form_name_label" = "Name";
@@ -22,3 +23,7 @@
 "user_form_phone_label" = "Phone";
 "user_form_mail_label" = "Mail";
 "user_form_save_button" = "Save";
+"user_form_alert_save_title" = "Successfully saved";
+"user_form_alert_save_body" = "Your data has been saved correctly";
+"user_form_alert_save_error_title" = "Error";
+"user_form_alert_save_error_body" = "Please check all fields";
