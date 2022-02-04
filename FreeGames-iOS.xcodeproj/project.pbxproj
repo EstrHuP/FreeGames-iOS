@@ -42,10 +42,10 @@
 		C76CB4DA27A9838F00A3D65C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CB4D927A9838F00A3D65C /* User.swift */; };
 		C76CB4DC27A98A9500A3D65C /* UserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76CB4DB27A98A9500A3D65C /* UserProvider.swift */; };
 		C76F746E27AD4137005E80B5 /* PermissionContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F746D27AD4137005E80B5 /* PermissionContract.swift */; };
-		C76F747027AD4142005E80B5 /* PermissionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F746F27AD4142005E80B5 /* PermissionBuilder.swift */; };
 		C76F747227AD4680005E80B5 /* PermissionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C76F747127AD4680005E80B5 /* PermissionViewController.storyboard */; };
 		C76F747427AD468B005E80B5 /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F747327AD468B005E80B5 /* PermissionViewController.swift */; };
 		C76F747627AD51B4005E80B5 /* PermissionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F747527AD51B4005E80B5 /* PermissionPresenter.swift */; };
+		C76F747A27AD92AB005E80B5 /* PermissionControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76F747927AD92AB005E80B5 /* PermissionControllerBuilder.swift */; };
 		C798E0D627AB238600E32C3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C798E0D827AB238600E32C3F /* Localizable.strings */; };
 		C798E0DC27AB256700E32C3F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C798E0DB27AB256700E32C3F /* StringExtensions.swift */; };
 		C7DDAADE27A5B24800F0EF71 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DDAADD27A5B24800F0EF71 /* BundleExtensions.swift */; };
@@ -112,10 +112,10 @@
 		C76CB4D927A9838F00A3D65C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C76CB4DB27A98A9500A3D65C /* UserProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProvider.swift; sourceTree = "<group>"; };
 		C76F746D27AD4137005E80B5 /* PermissionContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionContract.swift; sourceTree = "<group>"; };
-		C76F746F27AD4142005E80B5 /* PermissionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionBuilder.swift; sourceTree = "<group>"; };
 		C76F747127AD4680005E80B5 /* PermissionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PermissionViewController.storyboard; sourceTree = "<group>"; };
 		C76F747327AD468B005E80B5 /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
 		C76F747527AD51B4005E80B5 /* PermissionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionPresenter.swift; sourceTree = "<group>"; };
+		C76F747927AD92AB005E80B5 /* PermissionControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionControllerBuilder.swift; sourceTree = "<group>"; };
 		C798E0D727AB238600E32C3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C798E0DA27AB23CE00E32C3F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C798E0DB27AB256700E32C3F /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -431,8 +431,8 @@
 				C76F746C27AD411D005E80B5 /* Presenter */,
 				C76F746B27AD4116005E80B5 /* Interactor */,
 				C76F746A27AD4110005E80B5 /* View */,
-				C76F746F27AD4142005E80B5 /* PermissionBuilder.swift */,
 				C76F746D27AD4137005E80B5 /* PermissionContract.swift */,
+				C76F747927AD92AB005E80B5 /* PermissionControllerBuilder.swift */,
 			);
 			path = PermissionController;
 			sourceTree = "<group>";
@@ -733,6 +733,7 @@
 				C7587344279F7387006C0A64 /* ListGamesViewController.swift in Sources */,
 				C75872FA279F58AD006C0A64 /* AppDelegate.swift in Sources */,
 				C70A350C27A2D33100118998 /* GamesListWireframe.swift in Sources */,
+				C76F747A27AD92AB005E80B5 /* PermissionControllerBuilder.swift in Sources */,
 				C7DDAADE27A5B24800F0EF71 /* BundleExtensions.swift in Sources */,
 				C76CB4D327A954B400A3D65C /* UserFormContract.swift in Sources */,
 				C70A350927A2C81900118998 /* GameDetailViewController.swift in Sources */,
@@ -748,7 +749,6 @@
 				C7DDAAE027A5B96F00F0EF71 /* GameDetail.swift in Sources */,
 				C75872FC279F58AD006C0A64 /* SceneDelegate.swift in Sources */,
 				C798E0DC27AB256700E32C3F /* StringExtensions.swift in Sources */,
-				C76F747027AD4142005E80B5 /* PermissionBuilder.swift in Sources */,
 				C76CB4D727A954C700A3D65C /* UserFormInteractor.swift in Sources */,
 				C76F747627AD51B4005E80B5 /* PermissionPresenter.swift in Sources */,
 			);

@@ -34,7 +34,7 @@ private extension InitialControllerBuilder {
     }
     
     func buildPermission() -> UINavigationController {
-        let permissionViewController = PermissionBuilder().build()
+        let permissionViewController = PermissionControllerBuilder().build()
         let permissionTabBarItem = UITabBarItem(title:
                                                 "tabbar_permissions".localized, image: .init(systemName: "lasso"), tag: 2)
         
