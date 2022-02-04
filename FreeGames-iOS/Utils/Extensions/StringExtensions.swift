@@ -12,16 +12,19 @@ extension String {
         return NSLocalizedString(self, comment: "")
     }
     
-    func isValidPhone(phone: String) -> Bool {
-        let phoneRegex = "^[0-9+]{0,1}+[0-9]{5,16}$"
-        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneRegex)
-        return phoneTest.evaluate(with: phone)
+    var isValidEmail: Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", options: .caseInsensitive)
+            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSMakeRange(0, self.count)) != nil
+        } catch {
+            return false
+        }
     }
-    
-    func isValidEmail(_ email: String) -> Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
-        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailPred.evaluate(with: email)
+    var isValidPhone: Bool {
+        let phoneNumberRegex = "^((\\+)|(00))[0-9]{6,14}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)
+        let isValidPhone = phoneTest.evaluate(with: self)
+        return isValidPhone
     }
 }

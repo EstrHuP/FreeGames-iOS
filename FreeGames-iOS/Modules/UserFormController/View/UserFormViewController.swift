@@ -29,7 +29,7 @@ class UserFormViewController: UIViewController {
     @IBOutlet weak var lastNameLabel: UILabel! { didSet { lastNameLabel.text = "user_form_lastName_label".localized }}
     @IBOutlet weak var phoneLabel: UILabel! { didSet { phoneLabel.text = "user_form_phone_label".localized }}
     @IBOutlet weak var mailLabel: UILabel! { didSet { mailLabel.text = "user_form_mail_label".localized }}
-    @IBOutlet weak var saveButton: UIButton! { didSet { saveButton.setTitle( "user_form_save_button".localized, for: .normal) }}
+    @IBOutlet weak var saveButton: UIButton! { didSet { saveButton.isEnabled = false; saveButton.setTitle( "user_form_save_button".localized, for: .normal) }}
     
     @IBOutlet weak var nameInput: UITextField!
     @IBOutlet weak var lastNameInput: UITextField!
@@ -80,10 +80,10 @@ extension UserFormViewController: UserFormViewContract {
         }
     }
     
-    func didValidateName(_ valid: Bool) { didUpdateValidation(label: nameErrorLabel, input: nameInput, valid: valid) }
-    func didValidateLastName(_ valid: Bool) { didUpdateValidation(label: lastNameErrorLabel, input: lastNameInput, valid: valid) }
-    func didValidatePhone(_ valid: Bool) { didUpdateValidation(label: phoneErrorLabel, input: phoneInput, valid: valid) }
-    func didValidateMail(_ valid: Bool) { didUpdateValidation(label: mailErrorLabel, input: mailInput, valid: valid) }
+    func didValidateName(_ valid: Bool) { didUpdateValidation(label: nameErrorLabel, input: nameInput, isNotEmpty: valid, isValid: true) }
+    func didValidateLastName(_ valid: Bool) { didUpdateValidation(label: lastNameErrorLabel, input: lastNameInput, isNotEmpty: valid, isValid: true) }
+    func didValidatePhone(_ valid: Bool) { didUpdateValidation(label: phoneErrorLabel, input: phoneInput, isNotEmpty: valid, isValid: phoneInput.text?.isValidPhone ?? true) }
+    func didValidateMail(_ valid: Bool) { didUpdateValidation(label: mailErrorLabel, input: mailInput, isNotEmpty: valid, isValid: mailInput.text?.isValidEmail ?? true) }
     
     func showValidationError() {
         DispatchQueue.main.async {
@@ -107,10 +107,32 @@ extension UserFormViewController {
         }
     }
     
-    private func didUpdateValidation(label: UILabel, input: UITextField, valid: Bool) {
+    private func didUpdateValidation(label: UILabel, input: UITextField, isNotEmpty: Bool, isValid: Bool) {
         DispatchQueue.main.async {
-            label.isHidden = valid ? true : false
-            input.backgroundColor = valid ? .systemBackground : .systemRed
+            label.isHidden = isValid ? true : false
+            if input == self.mailInput && isValid == false {
+                label.text = isValid ? "" : "Invalid email address"
+            } else if input == self.phoneInput && isValid == false {
+                label.text = isValid ? "" : "Phone number must cotain only digits"
+            }
+            input.backgroundColor = isNotEmpty ? .systemBackground : .systemRed
+            if !isNotEmpty {
+                label.isHidden = isNotEmpty ? true : false
+                label.text = isNotEmpty ? "" : "Required"
+            }
+            self.enabledSaveButton()
+        }
+    }
+    
+    private func enabledSaveButton() {
+        if !(nameInput.text?.isEmpty ?? false) && !(lastNameInput.text?.isEmpty ?? false) && !(phoneInput.text?.isEmpty ?? false) && !(mailInput.text?.isEmpty ?? false) {
+            if mailInput.text?.isValidEmail ?? false && phoneInput.text?.isValidPhone ?? false {
+                self.saveButton.isEnabled = false
+            } else {
+                self.saveButton.isEnabled = true
+            }
+        } else {
+            self.saveButton.isEnabled = false
         }
     }
     
