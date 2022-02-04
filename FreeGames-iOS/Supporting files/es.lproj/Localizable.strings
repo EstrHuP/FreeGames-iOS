@@ -9,6 +9,7 @@
 //TAB BAR
 "tabbar_games" = "Videojuegos";
 "tabbar_userProfile" = "Mi perfil";
+"tabbar_permissions" = "Permisos";
 
 //NAVIGATION
 "navigation_games_title" = "Videojuegos gratis";
@@ -27,3 +28,12 @@
 "user_form_alert_save_body" = "Tus datos se han guardado correctamente";
 "user_form_alert_save_error_title" = "Error";
 "user_form_alert_save_error_body" = "Por favor, comprueba todos los campos";
+
+//PERMISSIONS
+"notification_title_label" = "Notificaciones";
+"notification_title_button" = "Enviar notificaciones";
+"notification_change_permissions" = "Cambiar permisos";
+"notification_wait_permission_label" = "Por favor, acepta los permisos para continuar";
+"notification_ok_permission_label" = "Permisos aceptados";
+"notification_not_allowed_permission_label" = "No permitido";
+"notification_information_label" = "Sal de la aplicación o bloquea tu dispositivo para recibir la notificación";

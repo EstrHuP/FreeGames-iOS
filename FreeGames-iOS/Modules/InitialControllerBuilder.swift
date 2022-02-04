@@ -11,7 +11,7 @@ import UIKit
 class InitialControllerBuilder {
     func build() -> UIViewController {
         let tabBarController = UITabBarController()
-        let viewControllers = [buildGamesCollection(), buildUserForm()]
+        let viewControllers = [buildGamesCollection(), buildUserForm(), buildPermission()]
         tabBarController.setViewControllers(viewControllers, animated: false)
         
         return tabBarController
@@ -31,6 +31,14 @@ private extension InitialControllerBuilder {
         let formTabBarItem = UITabBarItem(title: "tabbar_userProfile".localized, image: .init(systemName: "person.circle"), tag: 1)
         
         return buildNavigation(with: formViewController, tabBarItem: formTabBarItem)
+    }
+    
+    func buildPermission() -> UINavigationController {
+        let permissionViewController = PermissionBuilder().build()
+        let permissionTabBarItem = UITabBarItem(title:
+                                                "tabbar_permissions".localized, image: .init(systemName: "lasso"), tag: 2)
+        
+        return buildNavigation(with: permissionViewController, tabBarItem: permissionTabBarItem)
     }
     
     func buildNavigation(with viewController: UIViewController, tabBarItem: UITabBarItem) -> UINavigationController {

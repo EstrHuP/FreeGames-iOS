@@ -9,6 +9,7 @@
 //TAB BAR
 "tabbar_games" = "Games";
 "tabbar_userProfile" = "My profile";
+"tabbar_permissions" = "Permissions";
 
 //NAVIGATION
 "navigation_games_title" = "Free games";
@@ -27,3 +28,12 @@
 "user_form_alert_save_body" = "Your data has been saved correctly";
 "user_form_alert_save_error_title" = "Error";
 "user_form_alert_save_error_body" = "Please check all fields";
+
+//PERMISSIONS
+"notification_title_label" = "Push notifications";
+"notification_title_button" = "Send notifications";
+"notification_change_permissions" = "Change permissions";
+"notification_wait_permission_label" = "Please, accept permissions to continue";
+"notification_ok_permission_label" = "Permissions accepted";
+"notification_not_allowed_permission_label" = "Not allowed";
+"notification_information_label" = "Exit the app or lock your device to receive the notification";
