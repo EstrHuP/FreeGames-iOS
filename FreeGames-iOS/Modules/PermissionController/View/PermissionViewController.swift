@@ -38,11 +38,10 @@ class PermissionViewController: UIViewController, PermissionViewContract {
             self.changeNotificationPermissionButton.isEnabled = false
             self.notificationLabel.text = "notification_ok_permission_label".localized
             self.notificationLabel.textColor = UIColor.green
-            self.messageNotificationLabel.isHidden = false
         }
     }
     
-    func isNotificationNotAlowed() {
+    func isNotificationNotAllowed() {
         DispatchQueue.main.async {
             self.notificationButton.isEnabled = false
             self.changeNotificationPermissionButton.isEnabled = true
@@ -50,6 +49,10 @@ class PermissionViewController: UIViewController, PermissionViewContract {
             self.notificationLabel.textColor = UIColor.red
             self.messageNotificationLabel.isHidden = true
         }
+    }
+    
+    func showMessageAllowed() {
+        self.messageNotificationLabel.isHidden = false
     }
     
     func openSettings() {

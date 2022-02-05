@@ -41,13 +41,14 @@ class PermissionPresenter: PermissionPresenterContract {
         center.add(request) { error in
             if error != nil { print("Error: \(error?.localizedDescription ?? "error local notification")")}
         }
+        view?.showMessageAllowed()
     }
     
     func didUpdatePermission() {
         userNotification.getNotificationSettings(completionHandler: { settings in
             switch settings.authorizationStatus {
             case .authorized: self.view?.isNotificationOK()
-            case .denied, .notDetermined: self.view?.isNotificationNotAlowed()
+            case .denied, .notDetermined: self.view?.isNotificationNotAllowed()
             case .provisional, .ephemeral: break
             @unknown default: break
             }

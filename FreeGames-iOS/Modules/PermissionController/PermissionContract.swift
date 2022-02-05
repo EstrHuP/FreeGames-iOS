@@ -12,8 +12,9 @@ protocol PermissionViewContract: UIViewController {
     var presenter: PermissionPresenterContract? {get set}
     
     func isNotificationOK()
-    func isNotificationNotAlowed()
+    func isNotificationNotAllowed()
     func openSettings()
+    func showMessageAllowed()
 }
 
 protocol PermissionPresenterContract: AnyObject {
