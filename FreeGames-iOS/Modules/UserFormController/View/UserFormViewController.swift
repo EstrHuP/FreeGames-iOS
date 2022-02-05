@@ -80,7 +80,7 @@ extension UserFormViewController: UserFormViewContract {
         }
     }
     
-    func didValidateName(_ valid: Bool) { didUpdateValidation(label: nameErrorLabel, input: nameInput, isNotEmpty: valid, isValid: !(lastNameInput.text?.isReallyEmpty ?? true) ) }
+    func didValidateName(_ valid: Bool) { didUpdateValidation(label: nameErrorLabel, input: nameInput, isNotEmpty: valid, isValid: !(nameInput.text?.isReallyEmpty ?? true) ) }
     func didValidateLastName(_ valid: Bool) { didUpdateValidation(label: lastNameErrorLabel, input: lastNameInput, isNotEmpty: valid, isValid: !(lastNameInput.text?.isReallyEmpty ?? true) ) }
     func didValidatePhone(_ valid: Bool) { didUpdateValidation(label: phoneErrorLabel, input: phoneInput, isNotEmpty: valid, isValid: phoneInput.text?.isValidPhone ?? true) }
     func didValidateMail(_ valid: Bool) { didUpdateValidation(label: mailErrorLabel, input: mailInput, isNotEmpty: valid, isValid: mailInput.text?.isValidEmail ?? true) }
