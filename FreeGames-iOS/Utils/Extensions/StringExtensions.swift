@@ -34,4 +34,8 @@ extension String {
             return false
         }
     }
+    
+    var isReallyEmpty: Bool {
+        return self.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
 }

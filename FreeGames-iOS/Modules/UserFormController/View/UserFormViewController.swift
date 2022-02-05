@@ -19,10 +19,10 @@ class UserFormViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    @IBOutlet weak var nameErrorLabel: UILabel! { didSet { nameErrorLabel.isHidden = true; nameErrorLabel.text = "user_form_field_required".localized }}
-    @IBOutlet weak var lastNameErrorLabel: UILabel! { didSet { lastNameErrorLabel.isHidden = true; lastNameErrorLabel.text = "user_form_field_required".localized }}
-    @IBOutlet weak var phoneErrorLabel: UILabel! { didSet { phoneErrorLabel.isHidden = true; phoneErrorLabel.text = "user_form_field_required".localized }}
-    @IBOutlet weak var mailErrorLabel: UILabel! { didSet { mailErrorLabel.isHidden = true; mailErrorLabel.text = "user_form_field_required".localized }}
+    @IBOutlet weak var nameErrorLabel: UILabel! { didSet { nameErrorLabel.isHidden = true; nameErrorLabel.text = "user_form_field_error_required".localized }}
+    @IBOutlet weak var lastNameErrorLabel: UILabel! { didSet { lastNameErrorLabel.isHidden = true; lastNameErrorLabel.text = "user_form_field_error_required".localized }}
+    @IBOutlet weak var phoneErrorLabel: UILabel! { didSet { phoneErrorLabel.isHidden = true; phoneErrorLabel.text = "user_form_field_error_required".localized }}
+    @IBOutlet weak var mailErrorLabel: UILabel! { didSet { mailErrorLabel.isHidden = true; mailErrorLabel.text = "user_form_field_error_required".localized }}
     @IBOutlet weak var titleLabel: UILabel! { didSet { titleLabel.text = "user_form_title_label".localized }}
     @IBOutlet weak var subTitleLabel: UILabel! { didSet { subTitleLabel.text = "user_form_subTitle_label".localized }}
     @IBOutlet weak var nameLabel: UILabel! { didSet { nameLabel.text = "user_form_name_label".localized }}
@@ -80,8 +80,8 @@ extension UserFormViewController: UserFormViewContract {
         }
     }
     
-    func didValidateName(_ valid: Bool) { didUpdateValidation(label: nameErrorLabel, input: nameInput, isNotEmpty: valid, isValid: true) }
-    func didValidateLastName(_ valid: Bool) { didUpdateValidation(label: lastNameErrorLabel, input: lastNameInput, isNotEmpty: valid, isValid: true) }
+    func didValidateName(_ valid: Bool) { didUpdateValidation(label: nameErrorLabel, input: nameInput, isNotEmpty: valid, isValid: !(lastNameInput.text?.isReallyEmpty ?? true) ) }
+    func didValidateLastName(_ valid: Bool) { didUpdateValidation(label: lastNameErrorLabel, input: lastNameInput, isNotEmpty: valid, isValid: !(lastNameInput.text?.isReallyEmpty ?? true) ) }
     func didValidatePhone(_ valid: Bool) { didUpdateValidation(label: phoneErrorLabel, input: phoneInput, isNotEmpty: valid, isValid: phoneInput.text?.isValidPhone ?? true) }
     func didValidateMail(_ valid: Bool) { didUpdateValidation(label: mailErrorLabel, input: mailInput, isNotEmpty: valid, isValid: mailInput.text?.isValidEmail ?? true) }
     
@@ -110,26 +110,30 @@ extension UserFormViewController {
     private func didUpdateValidation(label: UILabel, input: UITextField, isNotEmpty: Bool, isValid: Bool) {
         DispatchQueue.main.async {
             label.isHidden = isValid ? true : false
-            if input == self.mailInput && isValid == false {
-                label.text = isValid ? "" : "Invalid email address"
+            if input == self.nameInput && isValid == false {
+                label.text = isValid ? "" : "user_form_field_error_name_lastName".localized
+            } else if input == self.lastNameInput && isValid == false {
+                label.text = isValid ? "" : "user_form_field_error_name_lastName".localized
+            } else if input == self.mailInput && isValid == false {
+                label.text = isValid ? "" : "user_form_field_error_mail".localized
             } else if input == self.phoneInput && isValid == false {
-                label.text = isValid ? "" : "Phone number must cotain only digits"
+                label.text = isValid ? "" : "user_form_field_error_phone".localized
             }
             input.backgroundColor = isNotEmpty ? .systemBackground : .systemRed
             if !isNotEmpty {
                 label.isHidden = isNotEmpty ? true : false
-                label.text = isNotEmpty ? "" : "Required"
+                label.text = isNotEmpty ? "" : "user_form_field_error_required".localized
             }
             self.enabledSaveButton()
         }
     }
     
     private func enabledSaveButton() {
-        if !(nameInput.text?.isEmpty ?? false) && !(lastNameInput.text?.isEmpty ?? false) && !(phoneInput.text?.isEmpty ?? false) && !(mailInput.text?.isEmpty ?? false) {
+        if !(nameInput.text?.isReallyEmpty ?? false) && !(lastNameInput.text?.isReallyEmpty ?? false) && !(phoneInput.text?.isEmpty ?? false) && !(mailInput.text?.isEmpty ?? false) && !bioTextArea.text.isReallyEmpty {
             if mailInput.text?.isValidEmail ?? false && phoneInput.text?.isValidPhone ?? false {
-                self.saveButton.isEnabled = false
-            } else {
                 self.saveButton.isEnabled = true
+            } else {
+                self.saveButton.isEnabled = false
             }
         } else {
             self.saveButton.isEnabled = false
@@ -154,6 +158,7 @@ extension UserFormViewController {
 extension UserFormViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         presenter?.didUpdateBio(textView.text)
+        enabledSaveButton()
     }
 }
 

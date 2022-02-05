@@ -16,7 +16,10 @@
 "navigation_userProfile_title" = "Mi perfil";
 
 //USER FORM
-"user_form_field_required" = "Campo obligatorio";
+"user_form_field_error_required" = "Campo obligatorio";
+"user_form_field_error_name_lastName" = "Debe contener carácteres";
+"user_form_field_error_mail" = "Correo inválido";
+"user_form_field_error_phone" = "Debe contener al menos 7 dígitos";
 "user_form_title_label" = "Mis datos de usuario";
 "user_form_subTitle_label" = "Sobre mi";
 "user_form_name_label" = "Nombre";
