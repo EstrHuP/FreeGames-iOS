@@ -21,10 +21,10 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGm-m6-DQU">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="675"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="696"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qjh-Zh-fy7">
-                                                <rect key="frame" x="15" y="30" width="384" height="615"/>
+                                                <rect key="frame" x="15" y="30" width="384" height="636"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IZM-8s-BL4" userLabel="Stack Title View">
                                                         <rect key="frame" x="0.0" y="0.0" width="384" height="42.5"/>
@@ -242,28 +242,32 @@
                                                             </view>
                                                         </subviews>
                                                     </stackView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8FQ-P9-gt0">
-                                                        <rect key="frame" x="0.0" y="364" width="384" height="200"/>
-                                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="200" id="hoS-au-7EB"/>
-                                                        </constraints>
-                                                        <color key="textColor" systemColor="labelColor"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bO7-i1-UKT" userLabel="Stack Buttons View">
-                                                        <rect key="frame" x="0.0" y="584" width="384" height="31"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0rj-za-HHD">
+                                                        <rect key="frame" x="0.0" y="364" width="384" height="221"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFQ-N0-lGg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="177" height="31"/>
-                                                                <color key="backgroundColor" name="customRedColor"/>
-                                                                <color key="tintColor" red="0.91764705879999997" green="0.92549019610000005" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="gray" title="Delete"/>
-                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uFA-EB-BPJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="16"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                <color key="textColor" systemColor="systemRedColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8FQ-P9-gt0">
+                                                                <rect key="frame" x="0.0" y="21" width="384" height="200"/>
+                                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="200" id="hoS-au-7EB"/>
+                                                                </constraints>
+                                                                <color key="textColor" systemColor="labelColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bO7-i1-UKT" userLabel="Stack Buttons View">
+                                                        <rect key="frame" x="0.0" y="605" width="384" height="31"/>
+                                                        <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrR-Ox-RB6">
-                                                                <rect key="frame" x="207" y="0.0" width="177" height="31"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="384" height="31"/>
                                                                 <color key="backgroundColor" name="customBlueColor"/>
                                                                 <color key="tintColor" red="0.91764705879999997" green="0.92549019610000005" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <state key="normal" title="Button"/>
@@ -310,6 +314,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bioErrorLabel" destination="uFA-EB-BPJ" id="QEc-l6-Faf"/>
                         <outlet property="bioTextArea" destination="8FQ-P9-gt0" id="REW-ML-zHY"/>
                         <outlet property="lastNameErrorLabel" destination="bax-rY-UMf" id="fY7-c8-6bk"/>
                         <outlet property="lastNameInput" destination="ExF-XF-a4l" id="WSt-pc-gy0"/>
@@ -342,9 +347,6 @@
     <resources>
         <namedColor name="customBlueColor">
             <color red="0.29803921568627451" green="0.59999999999999998" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="customRedColor">
-            <color red="0.74117647058823533" green="0.25098039215686274" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

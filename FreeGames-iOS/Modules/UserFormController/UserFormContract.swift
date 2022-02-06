@@ -17,6 +17,7 @@ protocol UserFormViewContract: UIViewController {
     func didValidateLastName(_ valid: Bool)
     func didValidatePhone(_ valid: Bool)
     func didValidateMail(_ valid: Bool)
+    func didValidateBio(_ valid: Bool)
     
     func showValidationError()
     func showSuccessSave()

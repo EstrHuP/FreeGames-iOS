@@ -53,6 +53,7 @@ class UserFormPresenter: UserFormPresenterContract {
     
     func didUpdateBio(_ bio: String?) {
         userData.bio = bio
+        view?.didValidateBio(userData.isNotEmptyBio)
     }
 }
 
