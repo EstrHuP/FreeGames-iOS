@@ -1,5 +1,5 @@
 //
-//  GamesProviderTest.swift
+//  GamesProviderTests.swift
 //  FreeGames-iOSTests
 //
 //  Created by Esther Huecas on 6/2/22.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import FreeGames_iOS
 
-class GamesProviderTest: XCTestCase {
+class GamesProviderTests: XCTestCase {
     
     func testShouldFetchGames() {
         let expectation = expectation(description: "")

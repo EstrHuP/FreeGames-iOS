@@ -34,7 +34,7 @@
 		C7587342279F7362006C0A64 /* ListGamesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7587341279F7362006C0A64 /* ListGamesViewController.storyboard */; };
 		C7587344279F7387006C0A64 /* ListGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7587343279F7387006C0A64 /* ListGamesViewController.swift */; };
 		C75BA64827B03A0500D9D4EA /* GamesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BA64727B03A0500D9D4EA /* GamesInteractorTests.swift */; };
-		C75BA64A27B0453400D9D4EA /* GamesProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BA64927B0453400D9D4EA /* GamesProviderTest.swift */; };
+		C75BA64A27B0453400D9D4EA /* GamesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BA64927B0453400D9D4EA /* GamesProviderTests.swift */; };
 		C75BA64D27B04B8A00D9D4EA /* UserFormInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BA64C27B04B8A00D9D4EA /* UserFormInteractorTests.swift */; };
 		C75BA65027B04F5700D9D4EA /* UserFormProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BA64F27B04F5700D9D4EA /* UserFormProviderTests.swift */; };
 		C75BA65227B0569600D9D4EA /* UserFormModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75BA65127B0569600D9D4EA /* UserFormModelTests.swift */; };
@@ -109,7 +109,7 @@
 		C7587341279F7362006C0A64 /* ListGamesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListGamesViewController.storyboard; sourceTree = "<group>"; };
 		C7587343279F7387006C0A64 /* ListGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesViewController.swift; sourceTree = "<group>"; };
 		C75BA64727B03A0500D9D4EA /* GamesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesInteractorTests.swift; sourceTree = "<group>"; };
-		C75BA64927B0453400D9D4EA /* GamesProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesProviderTest.swift; sourceTree = "<group>"; };
+		C75BA64927B0453400D9D4EA /* GamesProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesProviderTests.swift; sourceTree = "<group>"; };
 		C75BA64C27B04B8A00D9D4EA /* UserFormInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormInteractorTests.swift; sourceTree = "<group>"; };
 		C75BA64F27B04F5700D9D4EA /* UserFormProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormProviderTests.swift; sourceTree = "<group>"; };
 		C75BA65127B0569600D9D4EA /* UserFormModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFormModelTests.swift; sourceTree = "<group>"; };
@@ -274,8 +274,8 @@
 		C758730F279F58B0006C0A64 /* FreeGames-iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				C75BA64E27B04F3D00D9D4EA /* UserForm */,
-				C75BA64B27B04A6300D9D4EA /* Games */,
+				C75BA64E27B04F3D00D9D4EA /* UserFormTests */,
+				C75BA64B27B04A6300D9D4EA /* GamesTests */,
 				C7587310279F58B0006C0A64 /* FreeGames_iOSTests.swift */,
 			);
 			path = "FreeGames-iOSTests";
@@ -375,23 +375,23 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		C75BA64B27B04A6300D9D4EA /* Games */ = {
+		C75BA64B27B04A6300D9D4EA /* GamesTests */ = {
 			isa = PBXGroup;
 			children = (
 				C75BA64727B03A0500D9D4EA /* GamesInteractorTests.swift */,
-				C75BA64927B0453400D9D4EA /* GamesProviderTest.swift */,
+				C75BA64927B0453400D9D4EA /* GamesProviderTests.swift */,
 			);
-			path = Games;
+			path = GamesTests;
 			sourceTree = "<group>";
 		};
-		C75BA64E27B04F3D00D9D4EA /* UserForm */ = {
+		C75BA64E27B04F3D00D9D4EA /* UserFormTests */ = {
 			isa = PBXGroup;
 			children = (
 				C75BA64C27B04B8A00D9D4EA /* UserFormInteractorTests.swift */,
 				C75BA64F27B04F5700D9D4EA /* UserFormProviderTests.swift */,
 				C75BA65127B0569600D9D4EA /* UserFormModelTests.swift */,
 			);
-			path = UserForm;
+			path = UserFormTests;
 			sourceTree = "<group>";
 		};
 		C76CB4C527A9486600A3D65C /* UserFormController */ = {
@@ -792,7 +792,7 @@
 				C75BA64827B03A0500D9D4EA /* GamesInteractorTests.swift in Sources */,
 				C75BA64D27B04B8A00D9D4EA /* UserFormInteractorTests.swift in Sources */,
 				C7587311279F58B0006C0A64 /* FreeGames_iOSTests.swift in Sources */,
-				C75BA64A27B0453400D9D4EA /* GamesProviderTest.swift in Sources */,
+				C75BA64A27B0453400D9D4EA /* GamesProviderTests.swift in Sources */,
 				C75BA65227B0569600D9D4EA /* UserFormModelTests.swift in Sources */,
 				C75BA65027B04F5700D9D4EA /* UserFormProviderTests.swift in Sources */,
 			);
