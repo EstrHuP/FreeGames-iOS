@@ -2,13 +2,13 @@
 Application about buisness's course by Esther Huecas
 
 # PODS:
-pod 'Kingfisher'
-pod 'Alamofire'
-- Descargar el proyecto y en la terminal agregar "pod install"
+pod 'Kingfisher', '~> 7.0'.
 
-Tres pantallas distintas con un TabBar para una correcta navegación y utilizado arquitectura VIPER.
+pod 'Alamofire', '~> 5.5'.
+- Descargar el proyecto y en la terminal agregar "pod install".
 
 # Contenido:
+Tres pantallas distintas con un TabBar para una correcta navegación y utilizado arquitectura VIPER.
 - # Videojuegos
 - Listado general de elementos. Alimentado a través de la API: https://www.freetogame.com/api-doc.
 - Detalle de dichos elementos donde muestra la imagen, título y una descripción más detallada según el id del juego pulsado.
