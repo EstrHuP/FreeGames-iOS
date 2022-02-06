@@ -40,3 +40,7 @@
 "notification_ok_permission_label" = "Permissions accepted";
 "notification_not_allowed_permission_label" = "Not allowed";
 "notification_information_label" = "Exit the app or lock your device to receive the notification";
+
+//SHOW PUSH NOTIFICATION
+"push_notification_title" = "Hey I'm a notification!";
+"push_notification_body" = "Press me and go to the Esther's application :)";

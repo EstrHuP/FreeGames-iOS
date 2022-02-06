@@ -40,3 +40,7 @@
 "notification_ok_permission_label" = "Permisos aceptados";
 "notification_not_allowed_permission_label" = "No permitido";
 "notification_information_label" = "Sal de la aplicación o bloquea tu dispositivo para recibir la notificación";
+
+//SHOW PUSH NOTIFICATION
+"push_notification_title" = "Hola, soy una notificación!";
+"push_notification_body" = "Pulsame y vamos a la aplicación de Esther :)";

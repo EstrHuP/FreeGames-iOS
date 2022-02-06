@@ -9,12 +9,10 @@ import Foundation
 import UserNotifications
 
 class PermissionPresenter: PermissionPresenterContract {
-    
     var interactor: PermissionInteractorContract?
     weak var view: PermissionViewContract?
     
     private let userNotification: UNUserNotificationCenter
-    
     init(userNotification: UNUserNotificationCenter = UNUserNotificationCenter.current()) {
         self.userNotification = userNotification
     }
@@ -25,11 +23,10 @@ class PermissionPresenter: PermissionPresenterContract {
                 self.view?.isNotificationOK()
             }
         }
-        
         let center = UNUserNotificationCenter.current()
         let content = UNMutableNotificationContent()
-        content.title = "Hey I'm a notification!"
-        content.body = "Press me and go to the Esther's application :)"
+        content.title = "push_notification_title".localized
+        content.body = "push_notification_body".localized
         content.sound = .default
         
         let date = Date().addingTimeInterval(5)

@@ -437,7 +437,6 @@
 			isa = PBXGroup;
 			children = (
 				C76F746A27AD4110005E80B5 /* View */,
-				C76F746B27AD4116005E80B5 /* Interactor */,
 				C76F746C27AD411D005E80B5 /* Presenter */,
 				C76F746D27AD4137005E80B5 /* PermissionContract.swift */,
 				C76F747927AD92AB005E80B5 /* PermissionControllerBuilder.swift */,
@@ -452,13 +451,6 @@
 				C76F747327AD468B005E80B5 /* PermissionViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		C76F746B27AD4116005E80B5 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
 			sourceTree = "<group>";
 		};
 		C76F746C27AD411D005E80B5 /* Presenter */ = {
