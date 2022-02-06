@@ -2,8 +2,8 @@
 Application about buisness's course by Esther Huecas
 
 # PODS:
-pod 'Kingfisher', '~> 7.0'
-pod 'Alamofire', '~> 5.5'
+pod 'Kingfisher'
+pod 'Alamofire'
 - Descargar el proyecto y en la terminal agregar "pod install"
 
 Tres pantallas distintas con un TabBar para una correcta navegación y utilizado arquitectura VIPER.
