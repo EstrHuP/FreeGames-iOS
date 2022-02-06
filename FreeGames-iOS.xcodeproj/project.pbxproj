@@ -355,6 +355,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		C75BA64227AFFF3300D9D4EA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C76F747127AD4680005E80B5 /* PermissionViewController.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		C76CB4C527A9486600A3D65C /* UserFormController */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,7 +448,7 @@
 		C76F746A27AD4110005E80B5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C76F747127AD4680005E80B5 /* PermissionViewController.storyboard */,
+				C75BA64227AFFF3300D9D4EA /* UI */,
 				C76F747327AD468B005E80B5 /* PermissionViewController.swift */,
 			);
 			path = View;
