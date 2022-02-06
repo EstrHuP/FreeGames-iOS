@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 
 enum GameProviderError: Error {
+    case badUrl
     case generic(Error?)
 }
 
