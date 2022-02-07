@@ -13,7 +13,7 @@ class UserFormProviderTests: XCTestCase {
     func testShouldFetchUserData() {
         let expectation = expectation(description: "")
         let sut = NetworkUserProvider()
-        let url = URL(string: "")
+        let url = URL(string: "userData.plist")
         
         sut.getUser(for: url) { result in
             switch result {
