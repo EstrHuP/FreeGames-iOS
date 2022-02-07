@@ -394,6 +394,13 @@
 			path = UserFormTests;
 			sourceTree = "<group>";
 		};
+		C75BA65327B112E500D9D4EA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		C76CB4C527A9486600A3D65C /* UserFormController */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +475,7 @@
 			isa = PBXGroup;
 			children = (
 				C76F746A27AD4110005E80B5 /* View */,
+				C75BA65327B112E500D9D4EA /* Interactor */,
 				C76F746C27AD411D005E80B5 /* Presenter */,
 				C76F746D27AD4137005E80B5 /* PermissionContract.swift */,
 				C76F747927AD92AB005E80B5 /* PermissionControllerBuilder.swift */,

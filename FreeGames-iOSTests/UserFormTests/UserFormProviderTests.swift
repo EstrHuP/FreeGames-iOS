@@ -18,7 +18,8 @@ class UserFormProviderTests: XCTestCase {
         sut.getUser(for: url) { result in
             switch result {
             case .success(let user):
-                XCTAssertFalse(((user.name?.isEmpty) != nil))
+                print(user)
+                XCTAssertFalse(user.name?.isEmpty ?? false)
             case .failure(let error): XCTFail(error.localizedDescription)
             }
             expectation.fulfill()
@@ -35,7 +36,7 @@ class UserFormProviderTests: XCTestCase {
         sut.saveDataUser(for: user, with: url) { result in
             switch result {
             case .success(let user):
-                XCTAssertFalse(((user.name?.isEmpty) != nil))
+                XCTAssertFalse(user.name?.isEmpty ?? false)
             case .failure(let error):
                 XCTFail(error.localizedDescription)
             }
